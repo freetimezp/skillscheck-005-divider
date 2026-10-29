@@ -1,18 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#f2ece5" />
+        <meta
+            name="description"
+            content="Test your HTML and CSS skills: horizontal dividers, borders, and spacing."
+        />
+        <title>Linework — Skills Check 005</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project</title>
-</head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
-<body>
-    start
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <header class="topbar">
+            <a class="brand" href="#top" aria-label="Linework home">
+                <span class="brand-mark">L.</span>
+                <span>LINEWORK <small>SKILLS CHECK / 005</small></span>
+            </a>
+            <span class="top-tag">
+                HTML + CSS <span class="status-dot"></span>
+            </span>
+        </header>
 
-    <script src="./assets/js/main.js"></script>
-</body>
+        <main id="top">
+            <section class="intro">
+                <div class="eyebrow"><span>005</span> / KNOWLEDGE TEST</div>
+                <h1>Every detail<br />draws a <em>line.</em></h1>
+                <p class="intro-copy">
+                    Test your understanding of horizontal dividers, CSS borders,
+                    and the spacing that brings a layout together.
+                </p>
+                <div class="intro-meta">
+                    <span><b>20</b> QUESTIONS</span>
+                    <span><b>~8</b> MINUTES</span>
+                    <span><b>HTML</b> + CSS BASICS</span>
+                </div>
+                <div class="hero-art" aria-hidden="true">
+                    <span class="art-number">005</span>
+                    <span class="art-line art-line-one"></span>
+                    <span class="art-line art-line-two"></span>
+                    <span class="art-circle"></span>
+                    <span class="art-square"></span>
+                    <span class="art-label">STRUCTURE / SPACE / STYLE</span>
+                </div>
+            </section>
 
+            <section class="quiz-layout" aria-label="Skills check">
+                <aside class="quiz-sidebar">
+                    <div class="sidebar-card">
+                        <span class="small-label">YOUR PROGRESS</span>
+                        <div class="progress-number">
+                            <strong id="progress-count">01</strong>
+                            <span>/ 20</span>
+                        </div>
+                        <div
+                            class="progress-track"
+                            role="progressbar"
+                            aria-label="Quiz progress"
+                            aria-valuemin="0"
+                            aria-valuemax="20"
+                            aria-valuenow="0"
+                            id="progress-bar"
+                        >
+                            <span id="progress-fill"></span>
+                        </div>
+                        <p id="progress-caption">
+                            A good line starts with a good question.
+                        </p>
+                    </div>
+
+                    <div class="sidebar-note">
+                        <span class="note-icon">✳</span>
+                        <h3>Think it through.</h3>
+                        <p>
+                            Some questions have more than one correct answer.
+                            Read the instruction above each question.
+                        </p>
+                    </div>
+
+                    <a
+                        class="back-link"
+                        href="https://freetimezp.github.io/roadmap-web-coding/"
+                    >
+                        <span aria-hidden="true">←</span> BACK TO ROADMAP
+                    </a>
+                </aside>
+
+                <section class="quiz-main" id="quiz-panel">
+                    <div class="quiz-topline">
+                        <span class="question-type" id="question-type">
+                            SINGLE ANSWER
+                        </span>
+                        <span class="question-index" id="question-index">
+                            QUESTION 01 / 20
+                        </span>
+                    </div>
+
+                    <h2 id="question-title">Loading question…</h2>
+                    <p class="question-hint" id="question-hint"></p>
+                    <div class="question-code" id="question-code" hidden>
+                        <pre><code id="code-content"></code></pre>
+                    </div>
+
+                    <form id="answer-form">
+                        <fieldset class="answers" id="answers">
+                            <legend class="sr-only">Choose your answer</legend>
+                        </fieldset>
+                        <p
+                            class="answer-notice"
+                            id="answer-notice"
+                            aria-live="polite"
+                        ></p>
+                        <div class="quiz-actions">
+                            <span class="keyboard-hint">TAKE YOUR TIME.</span>
+                            <button
+                                class="primary-button"
+                                id="check-button"
+                                type="submit"
+                            >
+                                Check answer <span aria-hidden="true">↗</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <section
+                        class="feedback"
+                        id="feedback"
+                        aria-live="polite"
+                        hidden
+                    >
+                        <div class="feedback-heading">
+                            <span
+                                class="feedback-symbol"
+                                id="feedback-symbol"
+                            ></span>
+                            <h3 id="feedback-title"></h3>
+                        </div>
+                        <p id="feedback-text"></p>
+                        <button
+                            class="primary-button next-button"
+                            id="next-button"
+                            type="button"
+                        >
+                            Next question <span aria-hidden="true">→</span>
+                        </button>
+                    </section>
+                </section>
+            </section>
+
+            <section class="finish-screen" id="finish-screen" hidden>
+                <div class="finish-stamp">005 / COMPLETE</div>
+                <p class="eyebrow">THE FINAL LINE</p>
+                <h2 id="result-title">Well done.</h2>
+
+                <div class="score-display">
+                    <strong id="final-score">0</strong>
+                    <span>/ 20</span>
+                </div>
+                <p id="result-message"></p>
+
+                <div class="result-track">
+                    <span id="result-fill"></span>
+                </div>
+
+                <div class="result-stats">
+                    <div>
+                        <strong id="correct-count">0</strong>
+                        <span>CORRECT</span>
+                    </div>
+                    <div>
+                        <strong id="incorrect-count">0</strong>
+                        <span>TO REVIEW</span>
+                    </div>
+                    <div>
+                        <strong id="final-percent">0%</strong>
+                        <span>YOUR SCORE</span>
+                    </div>
+                </div>
+
+                <button
+                    class="primary-button restart-button"
+                    id="restart-button"
+                    type="button"
+                >
+                    Try again <span aria-hidden="true">↻</span>
+                </button>
+
+                <a
+                    class="finish-back-link"
+                    href="https://freetimezp.github.io/roadmap-web-coding/"
+                >
+                    Return to the learning roadmap →
+                </a>
+            </section>
+
+            <section class="bottom-strip" aria-label="Topics covered">
+                <span>01 / SEMANTIC HTML</span>
+                <span>02 / BORDER STYLES</span>
+                <span>03 / BOX MODEL</span>
+                <span>04 / SPACING</span>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>
+                LINEWORK <span class="footer-accent">●</span> SKILLS CHECK 005
+            </span>
+            <span>BUILT FOR THE CURIOUS.</span>
+        </footer>
+
+        <script src="./assets/js/main.js" defer></script>
+    </body>
 </html>
